@@ -1,0 +1,872 @@
+// Importing the League Gothic font from Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+
+// Define color variables
+$header-color: #000000;
+$background-color: #1d1e22;
+$text-color: #ffffff;
+
+* {
+  margin: 0; // Resetting margin
+  padding: 0; // Resetting padding
+}
+
+body {
+  background-color: $background-color; // Setting background color
+  font-family: "League Gothic", sans-serif; // Setting font family
+  overflow-x: hidden; // Hiding horizontal overflow
+}
+
+header {
+  background-color: $header-color; // Setting background color
+  color: $text-color; // Setting text color
+  font-family: "League Gothic", sans-serif; // Setting font family
+  font-size: 1rem; // Setting font size
+  padding: 5px; // Setting padding
+  text-align: center; // Center aligning text
+  text-decoration: underline; // Adding underline decoration
+  margin-bottom: 5px; // Setting margin at the bottom
+}
+
+nav {
+  background-color: $header-color; // Setting background color
+  color: $text-color; // Setting text color
+  font-family: "League Gothic", sans-serif; // Setting font family
+  padding: 10px; // Setting padding
+  text-align: center; // Center aligning text
+  margin-top: 0; // Setting margin at the top
+
+  ul {
+    list-style: none; // Removing list styles
+    display: flex; // Displaying elements as flex
+    justify-content: space-evenly; // Distributing space evenly between elements
+    margin: 0; // Resetting margin
+    padding: 0; // Resetting padding
+  }
+
+  li {
+    margin: 0 10px; // Setting margin on the left and right
+  }
+
+  a {
+    text-decoration: none; // Removing text decoration
+    color: $text-color; // Setting text color
+    font-size: 1.5rem; // Setting font size
+    font-weight: 300; // Setting font weight
+    transition: color 0.3s ease; // Adding transition effect for color change
+
+    &:hover {
+      color: lighten($background-color, 80%); // Changing text color on hover
+    }
+  }
+}
+
+.banner {
+  display: flex; // Displaying elements as flex
+  align-items: center; // Aligning items vertically at the center
+  padding: 10px; // Setting padding
+  background-color: rgb(236, 227, 227); // Setting background color
+  margin-top: 1.5rem; // Setting margin at the top
+
+  .banner-text {
+    flex: 1; // Setting flexible width
+    margin-left: 3rem; // Setting margin on the left
+
+    h2 {
+      margin-bottom: 10px; // Setting margin at the bottom
+      text-decoration: underline; // Adding underline decoration
+      font-size: 3rem; // Setting font size
+      font-weight: 500; // Setting font weight
+    }
+
+    p {
+      font-size: 1.5rem; // Setting font size
+      font-weight: 300; // Setting font weight
+    }
+  }
+
+  img {
+    max-width: 30%; // Setting maximum width
+    margin-left: 1rem; // Setting margin on the left
+    margin-right: 3rem; // Setting margin on the right
+  }
+}
+
+h1 {
+  text-decoration: underline; // Adding underline decoration
+  font-size: 2rem; // Setting font size
+  color: $text-color; // Setting text color
+  margin-top: 15px; // Setting margin at the top
+  margin-left: 15px; // Setting margin on the left
+}
+
+.recent-games-section {
+  display: flex; // Displaying elements as flex
+  flex-direction: column; // Setting flex direction as column
+  align-items: center; // Aligning items vertically at the center
+  text-align: center; // Center aligning text
+  margin-top: 2rem; // Setting margin at the top
+
+  h1 {
+    margin-bottom: 20px; // Setting margin at the bottom
+  }
+
+  .game {
+    display: flex; // Displaying elements as flex
+    align-items: center; // Aligning items vertically at the center
+    margin-bottom: 20px; // Setting margin at the bottom
+
+    &:hover {
+      transform: scale(1.03); // Scaling the element on hover
+    }
+
+    img {
+      max-width: 18%; // Setting maximum width
+      margin-right: 15px; // Setting margin on the right
+      margin-left: 2rem; // Setting margin on the left
+    }
+
+    .game-details {
+      text-align: left; // Left aligning text
+      color: white; // Setting text color
+
+      h2 {
+        font-size: 2.5rem; // Setting font size
+        margin-bottom: 10px; // Setting margin at the bottom
+        font-weight: 400; // Setting font weight
+        text-decoration: underline; // Adding underline decoration
+      }
+
+      p {
+        margin-top: 0; // Setting margin at the top
+        font-size: 1.25rem; // Setting font size
+        font-weight: 300; // Setting font weight
+      }
+    }
+  }
+}
+
+.release {
+  padding: 20px; // Setting padding
+  background-color: #ffffff; // Setting background color
+  margin-top: 2rem; // Setting margin at the top
+
+  &:hover {
+    box-shadow: 2px 2px 2px 5px rgb(163, 26, 26); // Adding box shadow on hover
+  }
+
+  h2 {
+    color: black; // Setting text color
+    font-size: 3rem; // Setting font size
+    text-decoration: underline; // Adding underline decoration
+  }
+
+  .image-container {
+    display: flex; // Displaying elements as flex
+    align-items: flex-start; // Aligning items vertically at the start
+    margin-top: 20px; // Setting margin at the top
+
+    img {
+      max-width: 50%; // Setting maximum width
+      margin-right: 20px; // Setting margin on the right
+    }
+
+    .text-container {
+      color: black; // Setting text color
+
+      h3 {
+        font-size: 2rem; // Setting font size
+        margin-bottom: 10px; // Setting margin at the bottom
+        text-decoration: underline; // Adding underline decoration
+      }
+
+      p {
+        margin-top: 0; // Setting margin at the top
+        font-size: 1.5rem; // Setting font size
+        font-weight: 300; // Setting font weight
+      }
+
+      .button {
+        display: inline-block; // Displaying element as inline block
+        padding: 10px 20px; // Setting padding
+        background-color: rgb(0, 0, 0); // Setting background color
+        color: white; // Setting text color
+        text-decoration: none; // Removing text decoration
+        border-radius: 5px; // Adding border radius
+        font-size: 16px; // Setting font size
+        margin-top: 10px; // Setting margin at the top
+      }
+
+      .button:hover {
+        background-color: rgb(
+          255,
+          255,
+          255
+        ); // Changing background color on hover
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: 2rem; // Setting margin at the top
+  background-color: $header-color; // Setting background color
+  color: $text-color; // Setting text color
+  text-align: center; // Center aligning text
+  padding: 20px; // Setting padding
+}
+
+// mirage page stuff Starts ///
+.trailer {
+  background-image: url("images/ac-logo.jpg"); // Setting background image
+
+  video {
+    /* css settings for the video  */
+    width: 70%; // Setting width
+    height: 70%; // Setting height
+    margin-top: 4.5%; // Setting margin at the top
+    border: none; // Removing border
+    border-radius: 15px; // Adding border radius
+    filter: drop-shadow(3px 3px 4px #131514); // Adding drop shadow
+    transition: 700ms; // Adding transition
+
+    &:hover {
+      transform: scale(1.06); // Scaling the element on hover
+      transition: 700ms; // Adding transition
+      filter: drop-shadow(
+        3px 3px 4px #ffffff
+      ); // Changing drop shadow color on hover
+    }
+  }
+}
+
+.edition {
+  display: flex; // Displaying elements as flex
+  margin-bottom: 20px; // Setting margin at the bottom
+  margin-top: 50px; // Setting margin at the top
+
+  &:hover {
+    box-shadow: 0px 2px 2px $text-color; // Adding box shadow on hover
+  }
+
+  .game {
+    flex: 3; // Setting flex value
+    padding: 25px; // Setting padding
+    text-align: center; // Center aligning text
+
+    &:hover {
+      transform: scale(1.1); // Scaling the element on hover
+    }
+
+    img {
+      width: 400px; // Setting width
+      height: auto; // Setting height as auto
+    }
+
+    h2 {
+      margin-top: 10px; // Setting margin at the top
+      font-size: 2rem; // Setting font size
+      font-weight: 500; // Setting font weight
+      color: $text-color; // Setting text color
+    }
+
+    p {
+      margin-top: 5px; // Setting margin at the top
+      font-size: 1.1rem; // Setting font size
+      font-weight: 200; // Setting font weight
+      color: $text-color; // Setting text color
+    }
+  }
+}
+
+.assassin {
+  display: flex; // Displaying elements as flex
+  color: $text-color; // Setting text color
+  margin-top: 25px; // Setting margin at the top
+
+  &:hover {
+    transform: scale(1.02); // Scaling the element on hover
+  }
+
+  img {
+    max-width: 40%; // Setting maximum width
+    margin-left: 3%; // Setting margin on the left
+  }
+
+  p {
+    padding: 2%; // Setting padding
+    font-size: 2rem; // Setting font size
+    font-weight: 400; // Setting font weight
+  }
+}
+
+// responsive settings //
+
+// Responsive for iPhone 4 (320px x 480px)
+@media only screen and (max-width: 320px) {
+  body {
+    font-size: 14px; // Changing font size
+  }
+
+  h1 {
+    font-size: 1.5rem; // Changing font size
+  }
+
+  .game {
+    flex-direction: column; // Changing flex direction to column
+
+    img {
+      max-width: 100%; // Setting maximum width
+      margin-right: 0; // Setting margin on the right
+      margin-left: 0; // Setting margin on the left
+      margin-bottom: 10px; // Setting margin at the bottom
+    }
+
+    .game-details {
+      text-align: center; // Center aligning text
+
+      h2 {
+        font-size: 1.8rem; // Changing font size
+      }
+
+      p {
+        font-size: 1rem; // Changing font size
+      }
+    }
+  }
+
+  .release {
+    h2 {
+      font-size: 2rem; // Changing font size
+    }
+
+    .image-container {
+      flex-direction: column; // Changing flex direction to column
+
+      img {
+        max-width: 100%; // Setting maximum width
+        margin-right: 0; // Setting margin on the right
+        margin-bottom: 10px; // Setting margin at the bottom
+      }
+
+      .text-container {
+        text-align: center; // Center aligning text
+
+        h3 {
+          font-size: 1.8rem; // Changing font size
+        }
+
+        p {
+          font-size: 1rem; // Changing font size
+        }
+
+        .button {
+          font-size: 14px; // Changing font size
+        }
+      }
+    }
+  }
+
+  .edition {
+    flex-direction: column; // Changing flex direction to column
+    margin-top: 20px; // Setting margin at the top
+
+    .game {
+      flex: none; // Removing flex value
+      margin-bottom: 10px; // Setting margin at the bottom
+      padding: 10px; // Setting padding
+
+      img {
+        width: 100%; // Setting width
+        height: auto; // Setting height as auto
+      }
+
+      h2 {
+        font-size: 1.5rem; // Changing font size
+        margin-top: 5px; // Setting margin at the top
+      }
+
+      p {
+        font-size: 1rem; // Changing font size
+        margin-top: 2px; // Setting margin at the top
+      }
+    }
+  }
+
+  .assassin {
+    flex-direction: column; // Changing flex direction to column
+
+    img {
+      max-width: 100%; // Setting maximum width
+      margin-left: 0; // Setting margin on the left
+      margin-bottom: 10px; // Setting margin at the bottom
+    }
+
+    p {
+      padding: 2%; // Setting padding
+      font-size: 1.5rem; // Changing font size
+    }
+  }
+}
+
+// Responsive for iPhone X (375px x 812px)
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+  header {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    padding: 5px;
+  }
+
+  .banner-text {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .game {
+    img {
+      max-width: 100%; /* Change to 100% to make the images responsive */
+      height: auto;
+    }
+
+    .game-details {
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .release {
+    padding: 10px;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .image-container {
+      img {
+        max-width: 100%; /* Change to 100% to make the images responsive */
+        height: auto;
+        margin-bottom: 12rem;
+      }
+
+      .text-container {
+        h3 {
+          font-size: 2rem;
+          position: relative;
+          max-height: 30rem;
+          top: 13rem;
+          left: -24rem;
+          width: 370px;
+        }
+
+        p {
+          font-size: 1.2rem;
+          position: relative;
+          max-height: 30rem;
+          top: 12.5rem;
+          left: -24rem;
+          width: 370px;
+        }
+
+        .button {
+          position: relative;
+          max-height: 30rem;
+          top: 12rem;
+          left: -24rem;
+          width: 370px;
+
+          padding: 8px 15px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .edition {
+    margin-top: 10px;
+    display: block;
+
+    .game {
+      padding: 15px;
+
+      img {
+        max-width: 100%; /* Change to 100% to make the images responsive */
+        height: auto;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin-top: 5px;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  .assassin {
+    img {
+      min-width: 50%;
+      object-fit: contain;
+    }
+
+    p {
+      padding: 1%;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+// Responsive for Google Pixel (411px x 731px)
+@media only screen and (min-width: 376px) and (max-width: 411px) {
+  .banner {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 5px;
+
+    .banner-text {
+      margin-left: 0;
+      margin-right: 0;
+
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    img {
+      max-width: 40%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .game {
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    img {
+      max-width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+
+    .game-details {
+      text-align: center;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .release {
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    .image-container {
+      flex-direction: column;
+
+      img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      .text-container {
+        text-align: center;
+
+        h3 {
+          font-size: 2.2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        .button {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .edition {
+    flex-direction: column;
+    margin-top: 20px;
+
+    .game {
+      flex: none;
+      margin-bottom: 10px;
+      padding: 10px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin-top: 5px;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  .assassin {
+    flex-direction: column;
+
+    img {
+      max-width: 100%;
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+
+    p {
+      padding: 1%;
+      font-size: 2.2rem;
+    }
+  }
+}
+
+// Responsive for iPad (768px x 1024px)
+@media only screen and (min-width: 412px) and (max-width: 768px) {
+  header {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  .banner-text {
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .game {
+    img {
+      max-width: 20%;
+    }
+
+    .game-details {
+      h2 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .release {
+    padding: 15px;
+
+    h2 {
+      font-size: 3.5rem;
+    }
+
+    .image-container {
+      img {
+        max-width: 50%;
+      }
+
+      .text-container {
+        h3 {
+          font-size: 3rem;
+        }
+
+        p {
+          font-size: 1.5rem;
+        }
+
+        .button {
+          padding: 12px 25px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .edition {
+    margin-top: 20px;
+
+    .game {
+      padding: 20px;
+
+      img {
+        min-width: 80%;
+        object-fit: contain;
+      }
+
+      h2 {
+        font-size: 3rem;
+        margin-top: 10px;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .assassin {
+    img {
+      min-width: 50%;
+      object-fit: contain;
+    }
+
+    p {
+      padding: 3%;
+      font-size: 3rem;
+    }
+  }
+}
+
+// Responsive for Macbook Pro (typically 1440px x 900px)
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+  header {
+    font-size: 2rem;
+  }
+
+  nav {
+    padding: 15px;
+  }
+
+  .banner-text {
+    h2 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .game {
+    img {
+      max-width: 25%;
+    }
+
+    .game-details {
+      h2 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .release {
+    padding: 20px;
+
+    h2 {
+      font-size: 4.5rem;
+    }
+
+    .image-container {
+      img {
+        max-width: 60%;
+      }
+
+      .text-container {
+        h3 {
+          font-size: 4rem;
+        }
+
+        p {
+          font-size: 2rem;
+        }
+
+        .button {
+          padding: 15px 30px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .edition {
+    margin-top: 30px;
+
+    .game {
+      padding: 25px;
+
+      img {
+        min-width: 80%;
+        object-fit: contain;
+      }
+
+      h2 {
+        font-size: 4rem;
+        margin-top: 15px;
+      }
+
+      p {
+        font-size: 2rem;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .assassin {
+    img {
+      min-width: 40%;
+      object-fit: contain;
+    }
+
+    p {
+      padding: 4%;
+      font-size: 4rem;
+    }
+  }
+}
